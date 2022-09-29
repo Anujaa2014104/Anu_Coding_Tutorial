@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>looping ststements.</title>
+<style>
+
+a{
+text-decoration:none;
+display:inline-block;
+padding:25px 25px;
+}
+
+a:hover{
+background-color:#ddd;
+color:green;
+}
+
+.previous{
+background-color:#4caff0;
+color:white;
+border-radius:5px;
+margin-left:20px;
+}
+
+.next{
+background-color:#4caff0;
+color:white;
+border-radius:5px;
+margin-left:900px;
+}
+img{
+height:600px;
+width:600px;
+}
+
+</style>
+</head>
+<body style="background-color:lavender;">;
+<a href="index.html" class="previous">&laquo; HOME</a>
+<center>
+<font size = "5" face = "century schoolbook" color = "blue">
+<p><h1>LOOPING STATEMENTS</h1></p>
+</font>
+</center>
+<font size = "5" face = "araial" color = "black">
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; loops are used to execute a set of statements repeatedly until a particular condition is satisfied. A sequence of statements are executed until a specified condition is true. This sequence of statements to be executed is kept inside the curly braces { } known as the Loop body. After every execution of loop body, condition is verified, and if it is found to be true the loop body is executed again. When the condition check returns false, the loop body is not executed.</p>
+<p><there are 3 types of loops.they are,<br \></p>
+<p><ol><li>while loop</li>
+<li>do-while loop</li>
+<li>for loop</li>
+</ol></p>
+<center>
+<p><h1><u>while loop</u></h1></p>
+</center>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while loop can be addressed as an entry control loop. It is completed in 3 steps. <br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•Variable initialization.( e.g int x=0; )<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•condition( e.g while( x<=10) )<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•Variable increment or decrement ( x++ or x-- or x=x+2 )<br \>
+</p>
+<center><img src="loop1.jpg"></center>
+<p><b>Syntax:<br \></b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;variable initialization ;<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while (condition)<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; statements ;<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;variable increment or decrement ;<br \> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br \>
+</p>
+<p><b>Example:</b></p>
+<code>
+<font size = "5" face ="arial" color=red>
+<b><u>Program to print first 10 natural numbers:</u><br \></b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#include&ltstdio.h&gt<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#include&ltconio.h&gt<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;void main( )<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int x;<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x=1;<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while(x<=5)<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br \>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("%d\t", x);<br \>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x++;<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br \>
+<u>Output:</u><br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 2 3 4 5<br \>
+</font>
+</code>
+
+<hr \>
+<center>
+<p><h1><u>do while loop</u></h1></p>
+</center>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In some situations it is necessary to execute body of the loop before testing the condition. In such situations can be handled with the help of do-while loop. do statement evaluates the body of the loop first and at the end, the condition is checked using while statement. </p>
+<center><img src="loop2.jpg"></center>
+<p><b>Syntax:<br \></b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;do<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;statements;<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while(condition)<br \>
+</p>
+<p><b>Example:</b></p>
+<code>
+<font size = "5" face ="arial" color=red>
+<b><u>Program to print first ten multiple of 5:</u><br \></b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#include&ltstdio.h&gt<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#include&ltconio.h&gt<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;void main()<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int a,i;<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a=5;<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i=1;<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;do<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br \>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("%d\t",a*i);<br \>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i++;<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}while(i <= 5);<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br \>
+<b><u>Output</u><br \></b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 10 15 20 25<br \>
+</font>
+</code>
+<hr \>
+<center>
+<p><h1><u>for loop</u></h1></p>
+</center>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for loop is used to execute a set of statements repeatedly until a particular condition is satisfied. we can say it an open ended loop. In for loop we have exactly two semicolons, one after initialization and second after condition. In this loop we can have more than one initialization or increment/decrement, separated using comma operator. for loop can have only one condition.</h2></p>
+<center><img src="loop3.jpg"></center>
+<p><b>Syntax:<br \></b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(initialization; condition ; increment/decrement)<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br \>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;statement-block;<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br \>
+</p>
+<p><b>Example:</b></p>
+<code>
+<font size = "5" face ="arial" color=red>
+<u>Input:</u><br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#include&ltstdio.h&gt<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#include&ltconio.h&gt<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;void main( )<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int x;<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(x=1; x<=5; x++)<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br \>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("%d\t",x);<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br \>
+<b><u>Output:</u><br \><b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 2 3 4 5<br \>
+</font>
+</code>
+</font>
+<hr \>
+</font>
+<a href="beanching.html" class="previous">&laquo; PREVIOUS</a>
+<a href="function.html" class="next">NEXT &raquo;</a>
+<br \><br \>
+
+</body>
+</html>

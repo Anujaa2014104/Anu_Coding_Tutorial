@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>function</title>
+
+<style>
+
+a{
+text-decoration:none;
+display:inline-block;
+padding:25px 25px;
+}
+
+a:hover{
+background-color:#ddd;
+color:green;
+}
+
+.previous{
+background-color:#4caff0;
+color:white;
+border-radius:5px;
+margin-left:20px;
+}
+
+.next{
+background-color:#4caff0;
+color:white;
+border-radius:5px;
+margin-left:900px;
+}
+
+img{
+height:500px;
+width:550px;
+}
+</style>
+</head>
+<body="background-color:lavender;">;
+<a href="index.html" class="previous">&laquo; HOME</a>
+
+<center>
+<font size = "5" face = "century schoolbook" color = "blue">
+<h1>USER-DEFINED FUNCTIONS</h1>
+</font>
+</center>
+<font size = "5" face = "araial" color = "black">
+&nbsp;&nbsp;&nbsp;&nbsp;A function is a group of statements that together perform a task. Every C program has at least one function, which is main(), and all the most trivial programs can define additional functions.Functions are also called <u> meathods</u>
+<br \><br \>
+&nbsp;&nbsp;&nbsp;&nbsp;A function declaration tells the compiler about a function's name, return type, and parameters. A function definition provides the actual body of the function.
+<br \><br \>
+&nbsp;&nbsp;&nbsp;&nbsp;The C standard library provides numerous built-in functions that your program can call. For example,<u>strcat()</u> to concatenate two strings,<u> memcpy()</u> to copy one memory location to another location, and many more functions.
+<br \><br \>
+<hr \>
+<h3><u>Declaration of a function:</u></h3><br \>
+<b>syntax:</b><br \><br \>
+&nbsp;&nbsp;&nbsp;&nbsp;return_type function_name( parameter list ) <br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br \>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; body of the function<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br \><br \>
+
+<b>Retun:</b><br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;A function may return a value. The return_type is the data type of the value the function returns. Some functions perform the desired operations without returning a value. In this case, the return_type is the keyword void. <br \>
+</p>
+<p><b>Function Name:</b><br \> &nbsp;&nbsp;&nbsp;&nbsp;This is the actual name of the function. The function name and the parameter list together constitute the function signature. <br \>
+
+<br \><b>Parameters: </b><br \> &nbsp;&nbsp;&nbsp;&nbsp; A parameter is like a placeholder. When a function is invoked, you pass a value to the parameter. This value is referred to as actual parameter or argument. The parameter list refers to the type, order, and number of the parameters of a function. Parameters are optional; that is, a function may contain no parameters.
+
+<br \><br \><b>Function Body: </b><br \> &nbsp;&nbsp;&nbsp;&nbsp;The function body contains a collection of statements that define what the function does. <br \></h2>
+<center><img src="fun1.png"></center>
+<hr>
+<h3><u>Calling a function:</u></h3>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; To use a function, you will have to call that function to perform the defined task.
+
+When a program calls a function, the program control is transferred to the called function. A called function performs a defined task and when its return statement is executed or when its function-ending closing brace is reached, it returns the program control back to the main program.</p>
+<center><img src="fun3.png"></center><br><br>
+<center><img src="fun4.png"></center>
+<p><b>Example:</b></p>
+<code>
+<font size = "5" face = "araial" color = "red">
+<u>input:</u><br \>
+&nbsp;&nbsp;&nbsp;&nbsp;void introduction()<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br \>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Hi\n");<br \>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf("My name is Chaitanya\n");<br \>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("How are you?");<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br \>
+<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;int main()<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br \>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;introduction();<br \>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 0;<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br \>
+<br \>
+<u>Output:</u><br \>
+&nbsp;&nbsp;&nbsp;&nbsp;Hi<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;My name is Chaitanya<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;How are you?<br \>
+</font>
+</code>
+<hr \>
+<a href="loop.html" class="previous">&laquo; PREVIOUS</a>
+<a href="array.html" class="next">NEXT &raquo;</a>
+<br \><br \>
+</body>
+</html>

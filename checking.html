@@ -1,0 +1,255 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>dropdown Menu</title>
+<style>
+:root {
+  --color-primary: #0073ff;
+  --color-white: #e9e9e9;
+  --color-black: #141d28;
+ --color-black-1: #212b38;
+ 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(galary.jpeg);
+-webkit-background-size: cover;
+background-size: cover;
+background-position: center center;
+height: 75vh;
+ 
+}
+
+.logo {
+  color: white;
+  font-size: 25px;
+
+font-family: big john
+}
+
+.logo span {
+  color: var(--color-primary);
+}
+
+.menu-bar {
+  background-color:orange;
+  height: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+
+  position: relative;
+}
+
+.menu-bar ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu-bar ul li {
+  /* width: 120px; */
+  padding: 30px 30px;
+  /* text-align: center; */
+
+  position: relative;
+}
+
+.menu-bar ul li a {
+  font-size: 20px;
+  color: var(--color-white);
+  text-decoration: none;
+
+  transition: all 0.3s;
+}
+
+.menu-bar ul li a:hover {
+  color: var(--color-primary);
+}
+
+.fas {
+  float: right;
+  margin-left: 10px;
+  padding-top: 3px;
+}
+
+/* dropdown menu style */
+.dropdown-menu {
+  display: none;
+}
+
+.menu-bar ul li:hover .dropdown-menu {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: var(--color-black);
+}
+
+.menu-bar ul li:hover .dropdown-menu ul {
+  display: block;
+  margin: 10px;
+}
+
+.menu-bar ul li:hover .dropdown-menu ul li {
+  width: 150px;
+  padding: 10px;
+}
+
+.dropdown-menu-1 {
+  display: none;
+}
+
+.dropdown-menu ul li:hover .dropdown-menu-1 {
+  display: block;
+  position: absolute;
+  left: 150px;
+  top: 0;
+  background-color: var(--color-black);
+}
+
+img
+{
+width:320px;
+height:350px;
+position:absolute;
+}
+
+.container
+{
+width:350px;
+height:350px;
+position:absolute;
+margin-top:8%;
+margin-left:14%;
+prespective:1000px;
+transform-style:preserve-3d;
+transform: rotateX(-5deg) rotateZ(-5deg);
+animation:ror 20s linear infinite;
+}
+@keyframes ror
+{
+50%{
+transform:rotateX(30deg);
+}
+
+}
+
+.images
+{
+width:100%;
+position:absolute;
+transform-style:preserve-3d;
+animation:rotate 40s linear infinite;
+}
+@keyframes rotate
+{
+from{
+}
+to
+{
+transform:rotateY(360deg);
+}
+}
+
+img:nth-child(1)
+{
+transform: rotateY(60deg)  translateZ(300px);
+}
+img:nth-child(2)
+{
+transform: rotateY(120deg)  translateZ(300px);
+}
+img:nth-child(3)
+{
+transform: rotateY(180deg)  translateZ(300px);
+}
+img:nth-child(4)
+{
+transform: rotateY(240deg)  translateZ(300px);
+}
+img:nth-child(5)
+{
+transform: rotateY(300deg)  translateZ(300px);
+}
+img:nth-child(6)
+{
+transform: rotateY(360deg)  translateZ(300px);
+}
+img:hover
+{
+width:390px;
+height:390px;
+cursor:pointer;
+}
+</style>
+  </head>
+  <body>
+
+    <div class="menu-bar">
+     
+      <h1 class="logo">ANU CODING TUTORIALS</h1>
+      <ul>
+       <li><a href="about.html">ABOUT US</a></li>
+       <li><a href="#"> LANGUAGES</a>
+  	 
+           	 <div class="dropdown-menu">
+                	<ul>
+                  <li><a href="#">C language</a>
+                 
+                    
+                    
+                    <div class="dropdown-menu-1">
+                      <ul>
+                        <li><a href="overview.html">Overview</a></li>
+ 	 	<li><a href="keywords.html">Keywords</a></li>
+   	 	<li><a href="variables.html">Variables</a></li>
+ 	 	<li><a href="data types.html">Data types</a></li>
+ 	 	<li><a href="coments,tokens,rules.html">Coments</a></li>
+ 	 	<li><a href="operators.html">Operators</a></li>
+ 	 	<li><a href="beanching.html">Branching statments</a></li>
+  	 	<li><a href="loop.html">Loops</a></li>
+     	 	<li><a href="function.html">User defined function</a></li>
+ 	 	<li><a href="array.html">Arrays</a></li>
+ 	 	<li><a href="strng.html">Strings</a></li>
+ 	  	<li><a href="structure.html">Structure</a></li>
+ 	 	<li><a href="pointers.html">Pointers</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                 
+                </ul>
+              </div>
+        </li>
+<li><a href="video.html">VIDEOS</a></li>
+        <li><a href="#">QUIZ</a>
+
+<div class="dropdown-menu">
+                	<ul>
+ 	<li><a href="c quiz.html">C language</a></li>
+ 	
+</ul>
+</li>
+        
+        <li><a href="contact.html"><font-color: white >CONTACT US</a></li>
+      </ul>
+    </div>
+<div class="container">
+	<div class="images">
+		<img src="img1.jpeg">
+		<img src="img2.jpeg">
+		<img src="img3.jpeg">
+		<img src="img4.jpeg">
+		<img src="img5.jpeg">
+		<img src="img6.jpeg">		
+	</div>
+</div>
+  </body>
+</html>

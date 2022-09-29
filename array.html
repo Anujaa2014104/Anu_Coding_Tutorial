@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>array in c</title>
+<style>
+
+a{
+text-decoration:none;
+display:inline-block;
+padding:25px 25px;
+}
+
+a:hover{
+background-color:#ddd;
+color:green;
+}
+
+.previous{
+background-color:#4caff0;
+color:white;
+border-radius:5px;
+margin-left:20px;
+}
+
+.next{
+background-color:#4caff0;
+color:white;
+border-radius:5px;
+margin-left:900px;
+}
+
+</style>
+</head>
+<body style="background-color:lavender;">;
+<a href="index.html" class="previous">&laquo; HOME</a>
+<font size = "5" face = "araial" color = "black">
+<center>
+<font size = "5" face = "century schoolbook" color = "blue">
+<p><h1>ARRAY</h1></p>
+</font>
+</center>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;In C language, arrays are reffered to as structured data types. An array is defined as finite ordered collection of homogenous data, stored in contiguous memory locations.<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;Here the words,<br \><ul>
+<li>finite means data range must be defined.<br \></li>
+<li>ordered means data must be stored in continuous memory addresses.<br \></li>
+<li>homogenous means data must be of similar data type.<br \></li></ul>
+</p>
+<p><b>Application:<br \></b><ul>
+<li>To store list of Employee or Student names.<br \>
+<li>To store marks of a students.<br \>
+<li>To store list of numbers or characters etc.<br \>
+</ul></p>
+<p><h3><b>To declare an array</b></h3></p>
+<p><b>Snytax :</b><br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data-type variable-name[size];<br \>
+</p>
+<p><b>Example:<br \></b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int arr[10];<br \>
+</p>
+<p><b>Explanation:<br \></b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int is the data type, arr is the name of the array and 10 is the size of array. It means array arr can only contain 10 elements of int type. Index of an array starts from 0 to size-1 i.e first element of arr array will be stored at arr[0] address and last element will occupy arr[9].
+</p>
+<hr \>
+<p><h3><b>To create an array</b></h3></p>
+<p><b>Syntax:<br \></b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_type array-name[size] = { list of values };<br \>
+</p>
+<p><b>Example:<br \></b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int marks[4]={ 67, 87, 56, 77 };   //integer array initialization<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;float area[5]={ 23.4, 6.8, 5.5 };   //float array initialization<br \>
+</p>
+<p><b>Example:</b></p>
+<code>
+<font size = "5" face = "araial" color = "red">
+&nbsp;&nbsp;&nbsp;&nbsp;#include&ltstdio.h&gt<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;#include&ltconio.h>&gt<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;void main()<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int arr[4];<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int i, j;<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Enter array element");<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(i=0;i<4;i++)<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br \>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scanf("%d",&arr[i]);    //Run time array initialization<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(j=0;j<4;j++)<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br \>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("%d\n",arr[j]);<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br \>
+</font>
+</code>
+<hr \>
+<font size = "5" face = "century schoolbook" color = "blue">
+<p><h3>Two dimentional array</h3></p>
+</font>
+<p>C language supports multidimensional arrays. The simplest form of the multidimensional array is the two-dimensional array.</p>
+<p><b>Syntax :<br \></b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_type array-name[row-size][column-size] <br \>
+</p>
+<p><b>Example:<br \></b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int a[3][4];<br \>
+</p>
+<p><b>Example:<br \></b>
+<code>
+<font size = "5" face = "araial" color = "red">
+&nbsp;&nbsp;&nbsp;&nbsp;#include&ltstdio.h&gt<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;#include&ltconio.h&gt<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;void main()<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int arr[3][4];<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int i,j,k;<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Enter array element");<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(i=0;i<3;i++)<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br \>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(j=0; j < 4; j++)<br \>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br \>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scanf("%d",&arr[i][j]);<br \>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(i=0; i < 3; i++)<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br \>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(j=0; j < 4; j++)<br \>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br \>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("%d",arr[i][j]);<br \>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br \>
+</font>
+</code>
+</font>
+<hr \>
+<a href="function.html" class="previous">&laquo; PREVIOUS</a>
+<a href="strng.html" class="next">NEXT &raquo;</a>
+<br \><br \>
+
+</body>
+</html>

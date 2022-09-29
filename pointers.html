@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>pointers</title>
+<style>
+
+a{
+text-decoration:none;
+display:inline-block;
+padding:25px 25px;
+}
+
+a:hover{
+background-color:#ddd;
+color:green;
+}
+
+.previous{
+background-color:#4caff0;
+color:white;
+border-radius:5px;
+margin-left:20px;
+}
+
+.next{
+background-color:#4caff0;
+color:white;
+border-radius:5px;
+margin-left:900px;
+}
+
+</style>
+</head>
+<body="background-color:lavender;">;
+<a href="index.html" class="previous">&laquo; HOME</a>
+<center>
+<font size = "5" face = "century schoolbook" color = "blue">
+<h1>Pointers</h1>
+</font>
+</center>
+<font size = "5" face = "araial" color = "black">
+<p>A Pointer in C language is a variable which holds the address of another variable of same data type.
+Pointers are used to access memory and manipulate the address
+</p>
+<h3><b>Address of a memory location</b></h3>
+<p>Whenever a variable is defined in C language, a memory location is assigned for it, in which it's value will be stored. We can easily check this memory address, using the  & symbol.
+If var is the name of the variable, then & var will give its address.
+</p>
+<p><b>Example:</b></p>
+<code>
+<font size = "5" face ="arial" color=red>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#include&ltstdio.h&gt<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;void main( )<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int var = 7;<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Value of the variable var is: %d\n", var);<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Memory address of the variable var is: %u\n", &var);<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br \>
+</font>
+</code><br>
+<p>
+<p>Output</p><br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Value of the variable var is: 7 <br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Memory address of the variable var is: bcc7a00<br \>
+</p>
+<h3>Accessing a variable using it's address:</h3>
+<p>Since the memory addresses are also just numbers, they can also be assigned to some other variable. The variables which are used to hold memory addresses are called Pointer variables.
+A pointer variable is therefore nothing but a variable which holds an address of some other variable. And the value of a pointer variable gets stored in another memory location
+</p>
+<font size = "5" face ="arial" color=red>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int a=10,*ptr;<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ptr = &a;<br \></p>
+</font>
+<br \>
+<p><b>Example:</b></p>
+<code>
+<font size = "5" face ="arial" color=red>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#include&ltstdio.h&gt<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;void main( )<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int a=10;<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int *p;<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p=&a;<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("The value of  a is \t");<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("%d",a);<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("\n\n The address of a is \t");<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("%d",&a);<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("\n\n The value of p is \t");<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("%d",p);<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("\n\n The address of p is \t ");<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("%d",&p);<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("\n\n The value of *p is \t");<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("%d",*p);<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br \>
+</font>
+</code>
+<b><p>Output</p></b> 
+<p>The value of  a is &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10<br \>
+ The address of a is&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3445wfrit<br \>
+ The value of p is&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3445wfrit<br \>
+The address of p is&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7623osiig<br \>
+The value of *p is &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10<br \>
+</p>
+</font>
+
+<a href="structure.html" class="previous">&laquo; PREVIOUS</a>
+<a href="index.html" class="next">NEXT &raquo;</a>
+<br \><br \>
+
+
+
+</body>
+</html>

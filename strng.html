@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>strings and character array</title>
+<style>
+
+a{
+text-decoration:none;
+display:inline-block;
+padding:25px 25px;
+}
+
+a:hover{
+background-color:#ddd;
+color:green;
+}
+
+.previous{
+background-color:#4caff0;
+color:white;
+border-radius:5px;
+margin-left:20px;
+}
+img{
+height:250px;
+width:550px;
+}
+
+.next{
+background-color:#4caff0;
+color:white;
+border-radius:5px;
+margin-left:900px;
+}
+
+</style>
+</head>
+<body style="background-color:lavender;">;
+<a href="index.html" class="previous">&laquo; HOME</a>
+
+<center>
+<font size = "5" face = "century schoolbook" color = "blue">
+<p><h1><b>Strings and Character in Array</b></h1></p>
+</font>
+</center>
+<font size = "5" face = "araial" color = "black">
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String is a sequence of characters that is treated as a single data item and terminated by null character '\0'. Remember that C language does not support strings as a data type. A string is actually one-dimensional array of characters in C language. These are often used to create meaningful and readable programs</p>
+<p><b>EXAMPLE:<br \></b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The string "hello world" contains 12 characters including '\0' character which is automatically added by the compiler at the end of the string.
+</p>
+<p><h3><b>Declaring and Initializing a string variables</b></h3></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char name[13]="StudyTonight";   //valid character array initialization<br \>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char name[10]={'L','e','s','s','o','n','s','\0'};    //valid initialization<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remember that when you initialize a character array by listings all its characters separately then you must supply the '\0' character explicitly. 
+</p>
+<p><h3><b>String Input and Output</b></h3></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Input function scanf() can be used with %s format specifier to read a string input from the terminal. But there is one problem with scanf() function, it terminates its input on first white space it encounters. Therefore if you try to read an input string "Hello World" using scanf() function, it will only read Hello and terminate after encountering white spaces.
+However, C supports a format specification known as the edit set conversion code %[..] that can be used to read a line containing a variety of characters, including white spaces.
+</p>
+<p><b>EXAMPLE:<br \></b><br \>
+<code>
+<font size = "5" face = "arial"  color = "red" >
+&nbsp;&nbsp;&nbsp;&nbsp;#include&ltstdio.h&gt<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;#include&ltconio.h&gt<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;#include&ltstring.h&gt<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;void main()<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char str[20];<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Enter a string:");<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scanf("%s",str);<br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("%s",str);<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br \><br \>
+
+<b>OUTPUT:</b><br \>
+ &nbsp;&nbsp;&nbsp;&nbsp;Enter a string:code<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;code<br \>
+</font>
+</code>
+<hr \>
+<center>
+<font size = "5" face = "century schoolbook" color = "blue">
+<p><h1>STRING HANDLING FUNCTIONS</h1></p>
+</font>
+</center>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C language supports a large number of string handling functions that can be used to carry out many of the string manipulations. These functions are packaged in string.h library. Hence, you must include string.h header file in your program to use these functions. </p>
+<center><img src="str1.png"></center>
+
+<hr \></font>
+<a href="array.html" class="previous">&laquo; PREVIOUS</a>
+<a href="structure.html" class="next">NEXT &raquo;</a>
+<br \><br \>
+</body>
+</html>

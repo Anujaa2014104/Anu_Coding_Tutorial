@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>structure</title>
+<style>
+
+a{
+text-decoration:none;
+display:inline-block;
+padding:25px 25px;
+}
+
+a:hover{
+background-color:#ddd;
+color:green;
+}
+
+.previous{
+background-color:#4caff0;
+color:white;
+border-radius:5px;
+margin-left:20px;
+}
+
+.next{
+background-color:#4caff0;
+color:white;
+border-radius:5px;
+margin-left:900px;
+}
+
+</style>
+
+</head>
+<body style="background-color:lavender;">;
+<a href="index.html" class="previous">&laquo; HOME</a>
+<center>
+<font size = "5" face = "century schoolbook" color = "blue">
+<p><h1>STRUCTURE</h1></p>
+</font>
+</center>
+<font size = "5" face = "araial" color = "black">
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Structure is a user-defined datatype in C language which allows us to combine data of different types together. Structure helps to construct a complex data type which is more meaningful. It is somewhat similar to an Array, but an array holds data of similar type only. But structure on the other hand, can store data of any type, which is practical more useful.struct keyword is used to define a structure. struct defines a new data type which is a collection of primary and derived data types.The elements declared inside a structure are called structure elements or structure members and the name of the structure is known as structure tag .</p>
+<p><b>Syntax:</b><br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;struct [structure_tag]<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br \>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//member variable 1;<br \>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//member variable 2;<br \>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//member variable 3;<br \>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}[structure_variables];<br \>
+</p>
+<p><b>Example:</b></p>
+<code>
+<font size = "5" face = "araial" color = "red">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;struct Student<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br \>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char name[25];<br \>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int age;<br \>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char branch[10];<br \>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char gender;<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};<br \>
+</font>
+</code>
+<hr \>
+<h3><b>Declaration of structure variables:</b></h3><br \>
+<p>Structure variables can be declared using 2 ways,<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.Declaring variables seperately.<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.Declaring variables in structure definition.<br \><br \>
+</p>
+<p><b>Example 1:</b></p>
+<code>
+<font size = "5" face = "araial" color = "red">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;struct Student<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br \>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char name[25];<br \>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int age;<br \>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char branch[10];<br \>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char gender;<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};<br \>
+<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;struct Student S1, S2;      //declaring variables of struct Student<br \>
+</font>
+</code>
+<p><b>Example 2:</b></p>
+<code>
+<font size = "5" face = "araial" color = "red">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;struct Student<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br \>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char name[25];<br \>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int age;<br \>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char branch[10];<br \>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char gender;<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};S1, S2;  	 	//declaring variables of struct Student<br \><br \>
+</font>
+</code>
+<hr \>
+<h3><b>Acessing the structure variables:</b></h3><br \>
+<code>
+<font size = "5" face = "araial" color = "red">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp#include&ltstdio.h&gt<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp struct Student<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp{<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbspint register no;<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbspfloat avg mark;<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbspint age;<br \>      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp};S1, S2;<br \>
+<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbspvoid main()<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp{<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp//To get student 1 details<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbspscanf("%d\n",&S1.register no);<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbspscanf("%f\n",&S1.avg mark);<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbspscanf("%d\n",&S1.age);<br \>
+<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp//To get student 2 details<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbspscanf("%d\n",&S2.register no);<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbspscanf("%f\n",&S2.avg mark);<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbspscanf("%d\n",&S2.age);<br \>
+<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbspprintf("Student 1");<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbspprintf("%d\n",S1.register no);<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbspprintf("%f\n",S1.avg mark);<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbspprintf("%d\n",S1.age);<br \>
+<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbspprintf("Student 2");<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbspprintf("%d\n",S2.register no);<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbspprintf("%f\n",S2.avg mark);<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbspprintf("%d\n",S2.age);<br \>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp}<br \>
+</font>
+</code>
+</font>
+<br>
+<a href="strng.html" class="previous">&laquo; PREVIOUS</a>
+<a href="pointers.html" class="next">NEXT &raquo;</a>
+<br \><br \>
+
+</body>
+</html>
